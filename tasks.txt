@@ -1,0 +1,6 @@
+1. Receive GitHub webhook
+2. Detect pull_request event
+3. Extract repo owner, repo name, PR number
+4. Fetch PR diff from GitHub API
+5. Ask AI to review only the diff
+6. Comment result back on the PR
