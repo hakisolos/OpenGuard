@@ -1,16 +1,30 @@
 {
-  "name": "opencode",
+  "name": "openguard",
   "module": "index.ts",
   "type": "module",
+  "license": "MIT",
   "private": true,
+  "scripts": {
+    "dev": "bun --watch index.ts",
+    "start": "pm2 start ecosystem.config.cjs --attach",
+    "start:docker": "pm2-runtime ecosystem.config.cjs",
+    "stop": "pm2 stop openguard",
+    "restart": "pm2 restart openguard",
+    "logs": "pm2 logs openguard",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
   "devDependencies": {
     "@types/bun": "latest",
-    "@types/node": "^25.6.0"
+    "@types/node": "^25.6.0",
+    "@types/nodemailer": "^8.0.0"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
-    "hono": "^4.12.16"
+    "hono": "^4.12.16",
+    "nodemailer": "^8.0.7",
+    "pm2": "^6.0.14"
   }
 }

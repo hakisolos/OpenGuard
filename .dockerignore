@@ -1,0 +1,13 @@
+node_modules
+logs
+.git
+.env
+.env.*
+coverage
+dist
+out
+*.log
+*.tgz
+.cache
+.eslintcache
+*.tsbuildinfo

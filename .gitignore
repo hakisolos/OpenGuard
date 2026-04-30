@@ -1,6 +1,7 @@
 # dependencies (bun install)
 node_modules
-
+logs/
+tasks.txt
 # output
 out
 dist

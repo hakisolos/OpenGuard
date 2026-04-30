@@ -1,8 +1,9 @@
 import app from "./app/server"
-const PORT = String(process.env.PORT) || 3000
+import { config } from "./src/configs/env"
 
 Bun.serve({
-    fetch: app.fetch,
-    port: PORT
+  fetch: app.fetch,
+  port: config.port,
 })
-console.log(`app running on http:s//localhost:${PORT}`)
+
+console.log(`OpenGuard running on http://localhost:${config.port}`)
